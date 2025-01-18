@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    //Incorrectly attempting to modify the content of an element that does not exist yet. 
+    document.getElementById('myDiv').innerHTML = "<p>This text replaces the previous content.</p>"; 
+    // The above line throws an error if the element with id="myDiv" isn't in the DOM when the script runs. 
+  </script>
+</body>
+</html>
